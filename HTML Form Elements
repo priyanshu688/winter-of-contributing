@@ -1,0 +1,93 @@
+HTML Form Elements
+
+Following are the different HTML Form Elements :-
+
+• <form> - It defines an HTML form for user input. 
+
+The HTML  <form> element can contain one or more of the following form elements. They are :-
+
+1) The <input> Element -  The most used form element is the <input> element. It defines an input control. It can be displayed in several ways, depending on the "type" attribute.
+  
+       for ex- <label for="fname">First name:</label>
+                  <input type="text" id="fname" name="fname">
+
+2) The <label> Element - It defines a label for an <input> element. The <label> element is useful for screen-reader users, because the screen-reader will read out loud the label when the user focus on the input element.
+
+                          The for attribute of the <label> tag should be equal to the id attribute of the <input> element to bind them together.
+
+3) The <select> Element - It defines a drop-down list. 
+                         for ex - <label for="cars">Choose a car:</label>
+                                     <select id="cars" name="cars">
+                                     <option value="volvo">Volvo</option>
+                                     <option value="saab">Saab</option>
+                                     <option value="fiat">Fiat</option>
+                                     <option value="audi">Audi</option>
+                              </select>
+
+    In the above example, The <option> elements defines an option that can be selected.
+
+4) The <textarea> Element - It defines a multi-line input control (a text area).  
+                         for ex - <textarea name="message" rows="10" cols="30">
+                                      The cat was playing in the garden.
+                                    </textarea>
+
+           In the above example, 
+                   The "rows" attribute pecifies the visible number of lines in a text area.
+                   The "cols" attribute specifies the visible width of a text area.
+
+5) The <button> Element - It defines a clickable button. 
+                      for ex - <button type="button" onclick="alert('Hello World!')">Click Me!                                   </button> 
+           Always specify the "type" attribute for the button element.
+
+6) The <fieldset> Element - It is used to group related data in a form. It represents a set of controls in a form, optionally grouped under the same name. 
+
+                           For ex - <form action="/action_page.php">
+                                  <fieldset>
+                                          <label for="fname">First name:</label><br>
+                                          <input type="text" id="fname" name="fname" value="John"><br>
+                                          <label for="lname">Last name:</label><br>
+                                          <input type="text" id="lname" name="lname" value="Doe"><br><br>
+                                          <input type="submit" value="Submit">
+                                  </fieldset>
+                          </form>
+
+7) The <legend> Element - It defines a caption for the <fieldset> element.
+
+                            For ex - <form action="/action_page.php">
+                                          <fieldset>
+                                              <legend>Personalia:</legend>
+                                              <label for="fname">First name:</label><br>
+                                              <input type="text" id="fname" name="fname" value="John"><br>
+                                              <label for="lname">Last name:</label><br>
+                                              <input type="text" id="lname" name="lname" value="Doe"><br><br>
+                                              <input type="submit" value="Submit">
+                                          </fieldset>
+                                      </form>
+
+8) The <datalist> Element - It specifies a list of pre-defined options for an <input> element.
+      The list attribute of the <input> element, must refer to the id attribute of the <datalist> element.
+      
+            For ex - <form action="/action_page.php">
+                          <input list="browsers">
+                          <datalist id="browsers">
+                          <option value="Internet Explorer">
+                          <option value="Firefox">
+                          <option value="Chrome">
+                          <option value="Opera">
+                          <option value="Safari">
+                      </datalist>
+                   </form>
+
+9) The <output> Element - It represents the result of a calculation (like one performed by a script).
+
+            For ex -  <form action="/action_page.php"
+                     oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+                             0
+                     <input type="range"  id="a" name="a" value="50">
+                       100 +
+                      <input type="number" id="b" name="b" value="50">
+                      =
+                      <output name="x" for="a b"></output>
+                     <br><br>
+                     <input type="submit">
+</form>
