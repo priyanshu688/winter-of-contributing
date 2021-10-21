@@ -1,0 +1,130 @@
+Basic Button Styling
+
+CSS Buttons mostly referred to the styled HTML Buttons that the developers customize to match their website designs. we can even manipulate the colors, text sizes, padding and can even change styling properties when buttons enter into the different states.
+
+• Adding Animation to the Button
+
+In order to make the animated buttons, place a movie clip in the button state that you are animating - 
+Step 1 - Firstly just create a movie clip for each state of the button that you want animated.
+Step 2 - Now Create the button.
+Step 3 - Then Place the movie clips in the button states to animate.
+         Movie Clips cannot be tested in the Animate editor. Choose Control > Test Movie or export it as a SWF file to test it.
+Step 4 - Place the button on the Stage. 
+
+Lets take an example of program to create a button - 
+
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+• Button Colors 
+
+We use the "background-color" property to change the background color of a button:
+
+For Example - 
+.button1 {background-color: #4CAF50;} /* Green */
+.button2 {background-color: #008CBA;} /* Blue */
+.button3 {background-color: #f44336;} /* Red */
+.button4 {background-color: #e7e7e7; color: black;} /* Gray */
+.button5 {background-color: #555555;} /* Black */
+
+• Button Sizes like 10px, 12px, 16px, 20px, 24px
+
+For this, We can use the "font-size" property to change the font size of a button:
+
+For Example -
+.button1 {font-size: 10px;}
+.button2 {font-size: 12px;}
+.button3 {font-size: 16px;}
+.button4 {font-size: 20px;}
+.button5 {font-size: 24px;}
+
+Also We can use the "padding property" to change the padding of a button:
+
+Like 10px 24px, 12px 28px, 14px 40px, 32px 16px, 16px
+
+For Example -
+.button1 {padding: 10px 24px;}
+.button2 {padding: 12px 28px;}
+.button3 {padding: 14px 40px;}
+.button4 {padding: 32px 16px;}
+.button5 {padding: 16px;}
+
+• Different Shapes of Buttons
+
+► Rounded Buttons
+  
+ We can use the "border-radius" property to add rounded corners to a button:
+
+For Example - 
+.button1 {border-radius: 2px;}
+.button2 {border-radius: 4px;}
+.button3 {border-radius: 8px;}
+.button4 {border-radius: 12px;}
+.button5 {border-radius: 50%;}
+
+► Colored Button Borders
+
+Like Green, Blue, Red, Gray, Black
+
+For this, We can use the "border" property to add a colored border to a button:
+
+For Example - 
+.button1 {
+  background-color: white;
+  color: black;
+  border: 2px solid #4CAF50; /* Green */
+}
+
+► Hoverable Buttons
+
+Like Green, Blue, Red, Grey, Black
+For this, We can use the :hover selector to change the style of a button when you move the mouse over it.
+
+For Example - 
+.button {
+  transition-duration: 0.4s;
+}
+
+.button:hover {
+  background-color: #4CAF50; /* Green */
+  color: white;
+}
+
+► Shadow Buttons (Shadow Button Shadow on hover)
+
+For this, We use the "box-shadow" property to add shadows to a button:
+
+For Example - 
+.button1 {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.button2:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+► Button Width
+ In order to change the width of the button like 250px, 50%, 100%
+By default, the size of the button is determined by its text content (as wide as its content). Use the width property to change the width of a button:
+
+For Example - 
+.button1 {width: 250px;}
+.button2 {width: 50%;}
+.button3 {width: 100%;}
+
+► Button Groups
+
+In order to create a button group, We need to remove margins and add float:left to each button -
+
+For Example - 
+.button {
+  float: left;
+}
