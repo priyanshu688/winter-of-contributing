@@ -1,0 +1,59 @@
+JavaScript Data Types
+
+Primitive values (immutable datum represented directly at the lowest level of the language) Boolean type. Null type. Undefined type. Number type. BigInt type. String type. Symbol type.
+Objects (collections of properties)
+
+• JavaScript variables can hold different data types: numbers, strings, objects and more:
+
+let length = 16;                               // Number
+let lastName = "Johnson";                      // String
+let x = {firstName:"John", lastName:"Doe"};    // Object
+
+• The Concept of Data Types
+
+In programming, data types is an important concept.
+To be able to operate on variables, it is important to know something about the type.
+
+Without data types, a computer cannot safely solve this:
+                              let x = 16 + "Volvo";
+                              Does it make any sense to add "Volvo" to sixteen? Will it produce an error or will it produce a result?
+
+JavaScript will treat the example above as:
+                                        let x = "16" + "Volvo";
+                                        
+JavaScript evaluates expressions from left to right. Different sequences can produce different results:
+                                                        JavaScript: let x = 16 + 4 + "Volvo";  
+                                                        
+• JavaScript Types are Dynamic
+
+JavaScript has dynamic types. This means that the same variable can be used to hold different data types:
+       For Example - let x;           // Now x is undefined
+                     x = 5;           // Now x is a Number
+                     x = "John";      // Now x is a String
+                     
+• JavaScript Strings
+
+A string (or a text string) is a series of characters like "John Doe".
+Strings are written with quotes. You can use single or double quotes:
+       For Example -
+                     let carName1 = "Volvo XC60";   // Using double quotes
+                     
+• JavaScript Numbers
+
+JavaScript has only one type of numbers.
+Numbers can be written with, or without decimals:
+
+For Example - 
+let x1 = 34.00;     // Written with decimals
+let x2 = 34;        // Written without decimals                     
+let carName2 = 'Volvo XC60';   // Using single quotes                     
+
+• The typeof Operator
+
+You can use the JavaScript typeof operator to find the type of a JavaScript variable.
+The typeof operator returns the type of a variable or an expression:
+
+For Example - 
+typeof ""             // Returns "string"
+typeof "John"         // Returns "string"
+typeof "John Doe"     // Returns "string"
