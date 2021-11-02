@@ -1,0 +1,104 @@
+CSS Styling List
+
+In HTML, There are two types of list :-
+
+1. Unordered List (<ul>) - The list items are not numbered, marked with bullets.
+2. Ordered List (<ol>) - The list items are marked with numbers or letters.
+
+For example- 
+    Unordered Lists:                Ordered Lists:
+      • Coffee                       1. Coffee
+      • Tea                          2. Tea
+      • Coca Cola                    3. Coca Cola
+      
+
+The CSS List properties allows you to:-
+    – Set different list item markers for unordered lists
+    – Set an image as the list item marker
+    – Set different list item markers for ordered lists
+    – Add background colors to lists and list items
+    
+◆ VARIOUS LIST ITEM MARKERS
+The list-style-type property specifies the type of list item marker.
+
+For example - 
+ul.a {
+  list-style-type: rectangle;
+}
+
+ul.b {
+  list-style-type: square;
+}
+
+ol.c {
+  list-style-type: lower-roman;
+}
+
+ol.d {
+  list-style-type: upper-alpha;
+}
+
+◆ IMAGE AS A LIST ITEM MARKER
+The list-style-image property specifies an image as the list item marker:
+Like - ul {
+       list-style-image: url('sqpurple.gif');
+      }
+      
+◆ POSITION THE LIST ITEM MARKERS
+The list-style-position property specifies the position of the list-item markers (bullet points).
+"list-style-position: outside;" means that the bullet points will be outside the list item. The start of each line of a list item will be aligned vertically.
+
+"list-style-position: inside;" means that the bullet points will be inside the list item. As it is part of the list item, it will be part of the text and push the text at the start.
+
+For example - 
+ul.a {
+  list-style-position: outside;
+}
+
+ul.b {
+  list-style-position: inside;
+}
+
+◆ REMOVE DEFAULT SETTINGS
+The list-style-type:none property can also be used to remove the markers/bullets.
+list also has default margin and padding. To remove this, add margin:0 and padding:0 to <ul> or <ol>
+
+For example - 
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+◆ LIST-SHORTHAND PROPERTY
+The list-style property is a shorthand property. It is used to set all the list properties in one declaration:-
+For example -
+ul {
+  list-style: square inside url("sqpurple.gif");
+}
+
+◆ STYLING LIST WITH COLORS
+Anything added to the <ol> or <ul> tag, affects the entire list, while properties added to the <li> tag will affect the individual list items:
+
+For example - 
+ol {
+  background: #ff9999;
+  padding: 20px;
+}
+
+ul {
+  background: #3399ff;
+  padding: 20px;
+}
+
+ol li {
+  background: #ffe5e5;
+  padding: 5px;
+  margin-left: 35px;
+}
+
+ul li {
+  background: #cce5ff;
+  margin: 5px;
+}
+     
