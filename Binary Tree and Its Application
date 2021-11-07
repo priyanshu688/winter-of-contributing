@@ -1,0 +1,36 @@
+◆ Binary Tree and Its Application
+
+→ A Binary Tree is a special type of tree data structure in which every node can have a "maximum of 2 children", one is known as "Left Child" and other is known as "Right Child".
+→ In Binary Tree, Every node can have either 0 child or 1 child or 2 children but not more than 2 children.
+
+• Following are the types of Binary Tree :-
+1. Strictly Binary Tree - A Binary Tree in which every node has either two or zero number of children is called Strictly Binary Tree.
+                          It is also called as "Full/Proper/2- Binary Tree".
+                          It is used to represent mathematical expressions.
+                          
+2. Complete Binary Tree - A Binary Tree in which All the nodes must have exactly two children and at every level of Complete Binary Tree, there must be 2^level number of nodes.
+                          A Binary Tree in which every internal node has exactly two children and all leaf nodes are at same level. 
+                          It is also called as "Perfect Binary Tree".
+                          
+3. Extended Binary Tree - A Binary Tree can be converted into Full Binary Tree by adding dummy nodes to the existing nodes whenever required.
+                          The Full Binary Tree obtained by adding dummy nodes to binary tree.
+                          
+• Binary Tree Representation
+
+Binary Tree can be represented using two methods :-
+1. Array Representation - In Array Representation of Binary Tree, we use 1-D array to represent the binary tree.
+                          To Represent a binary tree of depth "n" using array representation, we need 1-D array with maximum size of 2n+1.
+                          
+2. Linked List Representation - Here, we use double linked list to represent binary tree.
+                                In Double Linked List, Every node consists of three fields :-
+                                      1. 1st field for storing left child address.
+                                      2. 2nd field for storing Actual data.
+                                      3. 3rd field for storing right child address.
+                                      
+ • Following are the applications of the Binary Tree -
+ 1. Binary Tree is the most simpliest and efficient data structure to be used in most Software Systems. It is the properties of Binary Tree that makes it so widely used.
+ 2. Binary Tree is used to as the basic data structure in Microsoft Excel and spreadsheets in usual.
+ 3. Binary Tree is used to implement indexing of Segmented Database.
+ 4. Splay Tree (Binary Tree variant) is used in implemented efficient cache is hardware and software systems.
+ 5. Binary Space Partition Trees are used in Computer Graphics, Back face Culling, Collision detection, Ray Tracing and algorithms in rendering game graphics.
+ 
