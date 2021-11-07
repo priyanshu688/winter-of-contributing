@@ -1,0 +1,49 @@
+◆ Linear Search Techniques and Its Complexity Analysis.
+
+Linear Search - 
+→ Linear Search is a very simple search algorithm. In this type, A sequential search is made over all the items one by one. Every item is checked and if a match is found then that particular item is returned otherwise search continues till the end of data collection.
+→ It is used for unsorted and unordered small list of elements.
+→ It has a time complexity of O(n) which means Time is linearly dependent on number of elements.
+
+• Linear Search Algorithm is applied when-
+
+→ No information is given about the array.
+→ The given array is unsorted or the elements are unordered.
+→ The list of data items is smaller.
+ 
+► Linear Search Algorithm-
+ 
+Consider-
+         There is a linear array ‘a’ of size ‘n’.
+         Linear search algorithm is being used to search an element ‘item’ in this linear array.
+         If search ends in success, it sets loc to the index of the element otherwise it sets loc to -1.
+ 
+Then, Linear Search Algorithm is as follows-
+
+Linear_Search (a , n , item , loc)
+
+Begin
+for i = 0 to (n - 1) by 1 do
+if (a[i] = item) then
+set loc = i
+Exit
+endif
+endfor
+set loc = -1
+End
+
+• There are 3 cases to analyse an algorithm -
+1. Best case-
+In the best possible case,
+                 The element being searched may be found at the first position.
+                 In this case, the search terminates in success with just one comparison.
+                 Thus in best case, linear search algorithm takes O(1) operations.
+ 
+2. Worst Case-
+
+In the worst possible case,
+              The element being searched may be present at the last position or not present in the array at all.
+              In the former case, the search terminates in success with n comparisons.
+              In the later case, the search terminates in failure with n comparisons.
+              Thus in worst case, linear search algorithm takes O(n) operations.
+              In linear search, best-case complexity is O(1) where the element is found at the first index. Worst-case complexity is O(n) where the element is found at the last index or element is not present in the array.
