@@ -1,0 +1,38 @@
+Queue Operations using Array
+
+Queue Data Structure can be implemented using 1-D array and can store only fixed number of data values.
+
+Steps are as below :-
+ 
+1.  Define a 1-D array at specific size and insert or delete the values into that array by using FIFO Principle with the help of variables 'front' and 'rear'.
+2.  Initially both 'front' and 'rear' are set to -1.
+3.  Whenever we want to insert a new value into queue, Increment rear value by 1 and then insert at that position.
+4.  Whenever we want to delete a value from queue, Increment front value by 1 and then display value at 'front' position as deleted element.
+
+Following are the steps to create an empty queue :- 
+
+Step 1 - Include all header files which are used in the program and define a constant "SIZE" with specific value.
+Step 2 - Declare all user-defined functions which are used in queue implementation.
+Step 3 - Create a 1-D array with above defined size. (int queue[size]).
+Step 4 - Define two integer variables "front" and "rear" and initialize both with -1.
+Step 5 - Then implement main method by displaying number of operations list and make suitable functions call to perform operations selected by user on queue.
+
+EnQueue(value) - Inserting value into the queue. It is a function used to insert a new element into queue (rear position). It takes one integer value as parameter and insert that value into queue.
+
+ Step 1 - Check whether Queue is full (Rear == Size - 1).
+ Step 2 - If it is full, then display Queue is full!!! Insertion is not possible!! Terminate the function.
+ Step 3 - If it is not full, then Increment Rear value by 1(rear++) and set (queue[rear] = value).
+
+DeQueue(value) - Deleting a value from the queue. It is a function used to delete an element from the queue (front position). It doesn't take any value as parameter.
+
+Step 1 - Check whether Queue is empty (front == rear).
+Step 2 - If it is empty, then display "Queue is empty!! Deletion is not possible!! Terminate the function.
+Step 3 - If it is not empty, then Increment front value by 1(front++) then display queue[front] as deleted element. 
+                                          Then check both front & rear are equal (front == rear) and if it is true, then set both front and rear to -1. (front = rear = -1)
+
+Display() - displays the element of a queue.
+
+Step 1 - Check whether Queue is empty (front == rear)
+Step 2 - If it is empty, then display "Queue is empty!! Deletion is not possible!! Terminate the function.
+Step 3 - If it is not empty, then define an integer variable 'j' and set j=front+1.
+Step 4 - Display 'queue[i]' value and increment 'i' value by 1(i++). Repeat same process untill 'i' value is equal to rear (i<= rear) 
