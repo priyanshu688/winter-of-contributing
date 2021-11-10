@@ -1,0 +1,28 @@
+HTML Frames
+
+Frame is used to display a web page within a web page.
+The HTML <iframe> tag specifies an inline frame.
+An inline frame is used to embed another document within the current HTML document.
+
+ Syntax - <iframe src="url" title="description"></iframe>
+ 
+ Using the "height" and "width" attributes, we can specify the size of the frame.
+     Example - <iframe src="demo_iframe.htm" height="200" width="300" title="Iframe Example"></iframe>
+     
+ We can also add style attributeand then can use "height" and "width" properties like :-
+     Example - <iframe src="demo_iframe.htm" style="height:200px;width:300px;" title="Iframe Example"></iframe>
+     
+ Removing the Border - 
+    Inorder to remove the border, just add the "style" attribute and then use the CSS "border" property:-
+    For Example - <iframe src="demo_iframe.htm" style="border:none;" title="Iframe Example"></iframe>
+    
+    Note :- We can also change the change the size, style and color of the iframe's border by the use of given below code - 
+        <iframe src="demo_iframe.htm" style="border:2px solid red;" title="Iframe Example">          </iframe>
+        
+   An iframe can be used as the target frame for a link.
+    "target" attribute of the link must refer the name attribute of the frame.
+       For example - <iframe src="demo_iframe.htm" name="iframe_a" title="Iframe Example"></iframe>
+
+<p><a href="https://www.w3schools.com" target="iframe_a">W3Schools.com</a></p>
+
+    
