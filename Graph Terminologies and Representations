@@ -1,0 +1,43 @@
+◆ Graph Terminologies and Representations
+
+What is Graph?
+    → Graph is basically defined as a pictorial representation of a set of objects where some pairs of objects are connected by links. The interconnected objects are represented by points termed as vertices (V), and the links that connect the vertices are called edges(E).
+    
+  ► Following are the Graph Terminologies:-
+      • Vertex - Individual data element of a graph is called "Vertex". It is also known as "Node".
+      • Edge - An edge is a connecting link between two vertices. It is also known as "arc". It is represented as (StartingVertex, EndingVertex).
+      • Directed Graph - A graph with only directed edge is called "Directed Graph".
+      • Mixed Graph - A graph with both undirected and directed edges.
+      • End Vertices/ Endpoints - The two vertices joined by edge are called Endpoint of that edge.
+      • Origin - If a edge is directed, its first endpoint is said to be the origin of it.
+      • Destination - If a edge is directed, its first endpoint is said to be the origin of it and the other endpoint is said to be the destination of that edge.
+      • Adjacent - Two node or vertices are adjacent if they are connected to each other through an edge.                In the following example, B is adjacent to A, C is adjacent to B, and so on.
+      • Incident - Edge is said to be incident on a vertex if the vertex is one of the endpoints of that edge.
+      • Outgoing edge - A Directed edge is said to be outgoing edge on its origin vertex.
+      • Incoming edge - A Directed edge is said to be incoming edge on its destination vertex.
+      • Degree - Total number of edges connected to a vertex is said to be degree of that vertex.
+      • Indegree - Total number of incoming edges connected to a vertex is said to be indegree of that vertex.
+      • Path - Path is a sequence of alternate vertices and edges that starts at a vertex and ends at other vertex such that each edge is incident to its predecessor and successor vertex.
+      • Self-Loop - Edge is a self-loop if two endpoints coincide with each other.
+      
+ ► Graph Representations
+ 
+ Graph Data Structure is represented using the following - 
+ 1. Adjacency Matrix - Adjacency matrix is a sequential representation.
+                       It is used to represent which nodes are adjacent to each other. i.e. is there any edge connecting nodes to a graph.
+                       In this representation, we have to construct a nXn matrix A. If there is any edge from a vertex i to vertex j, then the corresponding element of A, ai,j                              = 1, otherwise ai,j= 0.
+                       If there is any weighted graph then instead of 1s and 0s, we can store the weight of the edge.
+       
+ 2. Incidence Matrix - In Incidence matrix representation, graph can be represented using a matrix of size: Total number of vertices by total number of edges.
+                       It means if a graph has 4 vertices and 6 edges, then it can be represented using a matrix of 4X6 class. In this matrix, columns represent edges and rows represent vertices.
+                       This matrix is filled with either 0 or 1 or -1. Where,
+                                         0 is used to represent row edge which is not connected to column vertex. 
+                                         1 is used to represent row edge which is connected as outgoing edge to column vertex.
+                                        -1 is used to represent row edge which is connected as incoming edge to column vertex.
+
+3. Adjacency List - Adjacency list is a linked representation.
+                    In this representation, for each vertex in the graph, we maintain the list of its neighbors. It means, every vertex of the graph contains list of its adjacent vertices.
+                    We have an array of vertices which is indexed by the vertex number and for each vertex v, the corresponding array element points to a singly linked list of neighbors of v.
+                    
+                    
+    
