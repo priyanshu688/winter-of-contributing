@@ -1,0 +1,25 @@
+Algorithm of Operations
+
+→ An Algorithm is a step-by-step procedure to solve a problem or sequence of statements which are used to perform task.
+→ An Algorithm is a finite set of instructions or logic, written in order to accomplish a certain pre-defined task.
+→ It can be expressed either as an "internal high level description as pseudocode" or using "a flowchart".
+
+Different Operations possible over Data Structure are :-
+
+– Inserting                  – Searching
+– Deleting                   – Sorting
+– Updating                   – Merging
+– Traversing                 – Destroying
+
+1. Creating - This is the first operation to create a data structure.
+              This is just declaration and initialisation of data structure and reversed memory locations for data structure.
+              
+2. Insertion - It is used to insert one or more data elements into an array. Based on requirement, new elements can be added at the beginning, end or any given index of array.
+               Add the element at the given index.
+               
+3. Deletion - Deletion refers to removing an existing elements from the array and re-arranging all the elements of an array.
+4. Traversal - Traversing a Data Structure means "visiting or touching" the elements of the stucture.
+               Sometimes also called as "iterating over data structure".
+               In Traversing operation of an array, each element of an array is accessed exactly for once for processing. It is also called visiting of an array.
+               
+Complexity of an Algorithm is the function which gives running time or space in terms of input size.
