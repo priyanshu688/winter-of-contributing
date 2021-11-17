@@ -1,0 +1,109 @@
+◆ Web SQL Database
+
+→ Web SQL Database API is a separate specification which basically introduces a set of APIs to manipulate client-side databases using SQL.
+→ Web SQL Database will generally work in latest version of Safari, Chrome and Opera.
+
+Following are the three Core Methods :-
+1. openDatabase - This method creates the database object either using existing database or creating new one.
+2. transaction  - This method gives us the ability to control a transaction and performing either commit or rollback based on the situation.
+3. executeSql   - This method is used to execute actual SQL query.
+
+• Opening Databse
+  In order to create and open a database, we can use the following -
+     var db = openDatabase('mydb', '1.0', 'Test DB', 2 * 1024 * 1024);
+     
+ It basically takes care of opening a database if it already exists.
+ The following five parameter are taken into consideration for the above methods -
+       → Database name
+       → Version number
+       → Text description
+       → Size of database
+       → Creation callback
+        
+→ Size of database and Creation Callback will be called if the database is being created.
+ 
+ • Executing Queries
+  In order to execute a query you use the database.transaction() function. This function needs a single argument, which is a function that takes care of actually executing the query as follows −
+            var db = openDatabase('mydb', '1.0', 'Test DB', 2 * 1024 * 1024); 
+               db.transaction(function (tx) {   
+                   tx.executeSql('CREATE TABLE IF NOT EXISTS LOGS (id unique, log)'); 
+               });
+               
+◆ INSERT Operation
+
+In order to create enteries into the table, we add simple SQL query in the above example as follows −
+           var db = openDatabase('mydb', '1.0', 'Test DB', 2 * 1024 * 1024); 
+                db.transaction(function (tx) { 
+                     tx.executeSql('CREATE TABLE IF NOT EXISTS LOGS (id unique, log)'); 
+                     tx.executeSql('INSERT INTO LOGS (id, log) VALUES (1, "foobar")'); 
+                     tx.executeSql('INSERT INTO LOGS (id, log) VALUES (2, "logmsg")'); 
+                   }); 
+        
+    We can also pass dynamic values while creating entering as follows −
+                 var db = openDatabase('mydb', '1.0', 'Test DB', 2 * 1024 * 1024);  
+                      db.transaction(function (tx) {   
+                            tx.executeSql('CREATE TABLE IF NOT EXISTS LOGS (id unique, log)'); 
+                            tx.executeSql('INSERT INTO LOGS (id,log) VALUES (?, ?'), [e_id, e_log]; 
+                          });
+            Where e_id and e_log are external variables
+            
+◆ READ Operation
+      In order to read already existing records we use a callback to capture the results as follows −
+               var db = openDatabase('mydb', '1.0', 'Test DB', 2 * 1024 * 1024); 
+               
+                     db.transaction(function (tx) { 
+                           tx.executeSql('CREATE TABLE IF NOT EXISTS LOGS (id unique, log)');
+                           tx.executeSql('INSERT INTO LOGS (id, log) VALUES (1, "foobar")'); 
+                           tx.executeSql('INSERT INTO LOGS (id, log) VALUES (2, "logmsg")'); 
+                       });  
+
+                     db.transaction(function (tx) { 
+                           tx.executeSql('SELECT * FROM LOGS', [], function (tx, results) { 
+                                  var len = results.rows.length, i; 
+                                  msg = "<p>Found rows: " + len + "</p>"; 
+                                  document.querySelector('#status').innerHTML +=  msg; 
+  
+                           for (i = 0; i < len; i++) { 
+                                 alert(results.rows.item(i).log ); 
+                           } 
+                     }, null); 
+                     });
+                     
+  • Now the final code implementing all the above operations are-
+  
+  <!DOCTYPE HTML> 
+
+<html>  
+   <head> 
+  
+      <script type = "text/javascript"> 
+         var db = openDatabase('mydb', '1.0', 'Test DB', 2 * 1024 * 1024); 
+         var msg; 
+    
+         db.transaction(function (tx) { 
+            tx.executeSql('CREATE TABLE IF NOT EXISTS LOGS (id unique, log)'); 
+            tx.executeSql('INSERT INTO LOGS (id, log) VALUES (1, "foobar")'); 
+            tx.executeSql('INSERT INTO LOGS (id, log) VALUES (2, "logmsg")'); 
+            msg = '<p>Log message created and row inserted.</p>'; 
+            document.querySelector('#status').innerHTML =  msg; 
+         })
+
+         db.transaction(function (tx) { 
+            tx.executeSql('SELECT * FROM LOGS', [], function (tx, results) { 
+               var len = results.rows.length, i; 
+               msg = "<p>Found rows: " + len + "</p>"; 
+               document.querySelector('#status').innerHTML +=  msg; 
+      
+               for (i = 0; i < len; i++) { 
+                  msg = "<p><b>" + results.rows.item(i).log + "</b></p>"; 
+                  document.querySelector('#status').innerHTML +=  msg; 
+               } 
+            }, null); 
+         }); 
+      </script> 
+   </head> 
+  
+   <body> 
+      <div id = "status" name = "status">Status Message</div> 
+   </body> 
+</html>
