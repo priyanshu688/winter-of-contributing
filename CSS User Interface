@@ -1,0 +1,39 @@
+CSS User Interface
+
+CSS User Interface property allows us to change the element into one of the several standard user interface elements.
+
+Following are some properties which we use in CSS User Interface :-
+1.  Box-Sizing - It allows the users to fix elements on area.
+2.  Appearance - It is used to allow the user to make elements as user interface elements.
+3.  Resize     - It is basically used to resize the element present on the area.
+4.  Icon       - It provides the icon on the area.
+5.  Nav-down   - It is used to move down when we pressed on down arrow button in keypad.
+6.  Nav-left   - It is used to move left when we pressed on left arrow button in keypad.
+7.  Nav right  - It is used to move right when we pressed on right arrow button in keypad.
+8.  Nav-up     - It is used to move up when we pressed on up arrow button in keypad.
+
+Let's see the examples of Resizing property:-
+
+Resizing Property have three common values as bsj=hown n=below-
+   • Horizontal
+   • Vertical
+   • Both Horizontal and Vertical
+   
+Code example implementing both Horizontal and vertical property in CSS3 User Interface :-
+  <html>
+      <head>
+      <style>
+         div {
+            border: 1px solid;
+            padding: 15px; 
+            width: 200px;
+            resize: both;
+            overflow: auto;
+         }
+      </style>
+   </head>
+
+   <body>
+      <div>Heroku.com</div>
+   </body>
+</html>
