@@ -1,0 +1,31 @@
+◆ Dynamic Programming and Its Significance
+
+◆ Dynamic Programming
+      → Dynamic Programming is both a mathematical optimization and a computer programming method.
+      → This Programming approach is quite similar to divide and conquer in breaking down the problem into smaller and yet smaller possible sub-problems. But here, these sub-                   problems are not solved independently and the results of these sub-problems are used for  overlapping sub-problems.
+      → This is used where we have problems, which can be further divided into similar sub-problems, so that their results can be re-used.
+   
+► Important points :-
+     
+    → Here. In this Approach, the problem should be able to be divided into smaller overlapping sub-problem.
+    → An optimum solution can be achieved by using an optimum solution of smaller sub-problems.
+    → Dynamic algorithms use Memoization.
+    → Dynamic programming can be used in both top-down and bottom-up manner.
+    
+• Let's see the example How the computer problems can be solved using the Dynamic Programming Approach :-
+       
+      1. Fibonacci number series
+      2. Knapsack problem
+      3. Tower of Hanoi
+      4. All pair shortest path by Floyd-Warshall
+      5. Shortest path by Dijkstra
+      6. Project scheduling
+       
+• Following are the significance of Dynamic Programming -
+    → Characterize the structure of an optimal solution.
+    → Recursively define the value of an optimal solution.
+    → Compute the optimal solution, typically bottom-up
+    → Construct the path of an optimal solution.
+    
+
+       
