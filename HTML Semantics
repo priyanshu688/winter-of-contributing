@@ -1,0 +1,78 @@
+◆ HTML Semantics
+
+→ Semantic HTML is the use of HTML markup to reinforce the semantics, or meaning, of the information in webpages and web applications.
+→ Semantic HTML is processed by traditional web browsers as well as by many other user agents.
+→ A semantic element clearly describes its meaning to both the browser and the developer.
+
+▪ Examples of Semantic Elements - 
+         <form>, <table>, and <article> - Clearly defines its content.
+▪ Examples of Non-Semantic Elements -
+         <div> and <span> - Tells nothing about its content.
+         
+► Semantic Elements in HTML
+There are many web sites contain HTML code like: <div id="nav"> <div class="header"> <div id="footer"> to indicate navigation, header, and footer.
+
+Let's see some examples of Semantic Elements that can be used to define different parts of a web page:-         
+      1. <aside>
+      2. <details>
+      3. <header>
+      4. <main>
+      5. <mark>
+      6. <nav> 
+      7. <section>
+      8. <summary>
+      9. <time>
+      10. <figcaption>
+      11. <figure>
+      12. <footer>
+        
+► HTML <section> Element
+    → HTML <section> Element defines a section in a document.
+    → A section is a thematic grouping of content, typically with a heading.
+    → Examples of where a <section> element can be used:
+            Chapters
+            Introduction
+            News items
+            Contact information
+            
+► HTML <article> Element
+      → HTML <article> Element  specifies independent, self-contained content.
+      → An article should make sense on its own, and it should be possible to distribute it independently from the rest of the web site.
+      → Examples of where the <article> element can be used:
+                   Forum posts
+                   Blog posts
+                   User comments
+                   Product cards
+                   Newspaper articles
+                   
+► HTML <header> Element
+       → HTML <header> Element represents a container for introductory content or a set of navigational links.
+       → A <header> element typically contains:
+                         one or more heading elements (<h1> - <h6>)
+                         logo or icon
+                         authorship information
+                         
+► HTML <footer> Element
+      → HTML <footer> Element defines a footer for a document or section.
+      → A <footer> element typically contains:
+                       authorship information
+                       copyright information
+                       contact information
+                       sitemap
+                       back to top links
+                       related documents
+                       
+► HTML <nav> Element
+     → HTML <nav> Element defines a set of navigation links.
+     → Example - A set of navigation links:
+            <nav>
+               <a href="/html/">HTML</a> |
+               <a href="/css/">CSS</a> |
+               <a href="/js/">JavaScript</a> |
+               <a href="/jquery/">jQuery</a>
+            </nav>
+            
+► HTML <aside> Element
+       → HTML <aside> Element defines some content aside from the content it is placed in (like a sidebar).
+       → The <aside> content should be indirectly related to the surrounding content.
+     
