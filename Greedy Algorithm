@@ -1,0 +1,51 @@
+◆ Greedy Algorithm
+
+→ Greedy Algorithm is the algorithm that follows the problem-solving heuristic of making the locally optimal choice at each stage.
+→ It picks the best immediate output, but does not consider the big picture, hence it is considered greedy.
+→ It produce good solutions on some mathematical problems.
+→ It iteratively makes one greedy choice after another, reducing each given problem into a smaller one.
+
+► Following are some of the examples of Greedy Algorithm :-
+     1. Prim's Minimal Spanning Tree Algorithm
+     2. Kruskal's Minimal Spanning Tree Algorithm
+     3. Dijkstra's Minimal Spanning Tree Algorithm
+     4. Travelling Salesman Problem
+     5. Graph-Map Coloring
+     6. Job Schedulling Problem
+     7. Knapsack Problem
+   
+For example - Let's suppose We need to convert a problem of an arbitrary number of cents into standard coins. Then This idea of transforming problems into algorithmic process is very important.
+
+► getOptimal(Item, arr[], int n)
+  1) Initialize empty result : result = {}
+  
+  2) While (All items are not considered)
+
+      // We make a greedy choice to select
+      // an item.
+      i = SelectAnItem() 
+
+      // If i is feasible, add i to the 
+      // result
+      if (feasible(i))
+        result = result U i 
+        
+  3) return result
+  
+► Following are the characteristics of Greedy approach :-
+         1. There is an ordered list of resources(profit, cost, value, etc.) 
+         2. Maximum of all the resources(max profit, max value, etc.) are taken. 
+         3. For example, in fractional knapsack problem, the maximum value/weight is taken first according to available capacity. 
+
+► Applications of Greedy Algorithms are the following:-
+         1. Finding an optimal solution (Activity selection, Fractional Knapsack, Job Sequencing, Huffman Coding). 
+         2. Finding close to the optimal solution for NP-Hard problems like TSP. 
+         
+► Advantages of Greedy Algorithm :-
+         1. Greedy approach is easy to implement.
+         2. Typically have less time complexities.
+         3. Greedy algorithms can be used for optimization purposes or finding close to optimization in case of NP Hard problems.
+         
+ ► Disadvantages of Greedy Algorithm :-
+         1. The local optimal solution may not always be global optimal.
+         
