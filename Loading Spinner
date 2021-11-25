@@ -1,0 +1,85 @@
+◆ Loading Spinner
+
+→ “spinners” can be used to show the loading state in your projects. 
+→ Spinner is used to display progress of those tasks whose total time of completion is unknown.
+→ Spinners provide a quick way to select one value from a set.
+
+→ Loading Spinner is generally a branded element with a looping animation that indicates loading is in process and where it will appear.
+→ Touching the spinner displays a dropdown menu with all other available values, from which the user can select a new one.
+
+► ANDROID SPINNER
+      – Android Spinner is like the combox box of AWT or Swing. 
+      – It can be used to display the multiple options to the user in which only one item can be selected by the user. 
+      – Android spinner is like the drop down menu with multiple values from which the end user can select only one value.
+      – Android spinner is associated with AdapterView. So you need to use one of the adapter classes with spinner.
+ 
+ • Let'see the simple example of spinner in android. 
+ 
+    ⇛ File: activity_main.xml
+         
+         <?xml version="1.0" encoding="utf-8"?>  
+           <android.support.constraint.ConstraintLayout                 xmlns:android="http://schemas.android.com/apk/res/android"  
+    xmlns:app="http://schemas.android.com/apk/res-auto"  
+    xmlns:tools="http://schemas.android.com/tools"  
+    android:layout_width="match_parent"  
+    android:layout_height="match_parent"  
+    tools:context="example.javatpoint.com.spinner.MainActivity">
+    
+    <Spinner  
+        android:id="@+id/spinner"  
+        android:layout_width="149dp"  
+        android:layout_height="40dp"  
+        android:layout_marginBottom="8dp"  
+        android:layout_marginEnd="8dp"  
+        android:layout_marginStart="8dp"  
+        android:layout_marginTop="8dp"  
+        app:layout_constraintBottom_toBottomOf="parent"  
+        app:layout_constraintEnd_toEndOf="parent"  
+        app:layout_constraintHorizontal_bias="0.502"  
+        app:layout_constraintStart_toStartOf="parent"  
+        app:layout_constraintTop_toTopOf="parent"  
+        app:layout_constraintVertical_bias="0.498" />  
+  
+</android.support.constraint.ConstraintLayout>  
+    
+   ⪼ File: MainActivity.java
+    
+    package example.javatpoint.com.spinner;  
+    import android.support.v7.app.AppCompatActivity;  
+    import android.os.Bundle;  
+    import android.view.View;  
+    import android.widget.AdapterView;  
+    import android.widget.ArrayAdapter;  
+    import android.widget.Spinner;  
+    import android.widget.Toast;  
+  
+    public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {  
+    String[] country = { "India", "USA", "China", "Japan", "Other"};  
+    
+    @Override  
+    protected void onCreate(Bundle savedInstanceState) {  
+        super.onCreate(savedInstanceState);  
+        setContentView(R.layout.activity_main);  
+       //Getting the instance of Spinner and applying OnItemSelectedListener on it  
+       
+       Spinner spin = (Spinner) findViewById(R.id.spinner);  
+        spin.setOnItemSelectedListener(this); 
+        //Creating the ArrayAdapter instance having the country list 
+        
+        ArrayAdapter aa = new ArrayAdapter(this,android.R.layout.simple_spinner_item,country);  
+        aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);  
+        
+        //Setting the ArrayAdapter data on the Spinner  
+        spin.setAdapter(aa);  
+    } 
+        //Performing action onItemSelected and onNothing selected  
+        
+        @Override  
+    public void onItemSelected(AdapterView<?> arg0, View arg1, int position, long id) {  
+        Toast.makeText(getApplicationContext(),country[position] , Toast.LENGTH_LONG).show();  
+    }  
+    @Override  
+    public void onNothingSelected(AdapterView<?> arg0) {  
+        // TODO Auto-generated method stub  
+    }  
+} 
